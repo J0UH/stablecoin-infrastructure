@@ -27,7 +27,7 @@ A token contract is a component, not a financial product. The difficult work sit
 ## How the pieces fit
 
 ```mermaid
-flowchart LR
+flowchart TD
     n0["Product rules"]
     n1["Authority"]
     n2["Contracts"]
