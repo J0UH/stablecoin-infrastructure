@@ -1,36 +1,56 @@
-# Stablecoin & Programmable-Money Infrastructure
+<p align="center">
+  <img src="assets/hero.png" alt="Stablecoin infrastructure system illustration" width="100%" />
+</p>
 
-> A code-free case study of programmable-money systems I have helped lead and build as Co-founder and CTO of Aryze.
+# Stablecoin infrastructure
 
-## What it enables
+I have spent years turning token contracts into systems that people can issue, integrate, operate, review, and support. That includes contracts, authority, deployment, verification, metadata, indexing, SDKs, vaults, bridges, product interfaces, audit work, and the less glamorous controls that keep all of it coherent.
 
-This body of work explores how regulated or asset-backed digital value can be issued, managed, integrated, observed, and used across product surfaces. It covers the technical journey from smart-contract primitives to the services, administrative tools, documentation, and operational controls required around them.
-
-Representative capability areas include:
-
-- Token creation and lifecycle management
-- Contract deployment, verification, metadata, and audit preparation
-- Vault, liquidity, and reserve-related product workflows
-- Multi-network deployment and integration tooling
-- Administrative and customer-facing product interfaces
-- Indexing, event processing, and system observability
-- SDKs and integration surfaces for other developers
+[Reach out](mailto:ju@jomena.group?subject=Discuss%20Stablecoin%20infrastructure) | [Book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Stablecoin%20infrastructure)
 
 ## The engineering problem
 
-A token contract by itself is not a complete product. Real systems need explicit authority boundaries, upgrade and deployment discipline, reliable event interpretation, operational tooling, integration contracts, and interfaces that make system state understandable to both technical and non-technical operators.
+A token contract is a component, not a financial product. The difficult work sits between on-chain rules and off-chain responsibility: who has authority, which artifact was deployed, how state is observed, how exceptions are handled, and how operators know what they are allowed to do.
 
-## My contribution
+## Systems and project pages
 
-My work has included product and technical direction, architecture across on-chain and off-chain boundaries, hands-on implementation and review, security and audit coordination, deployment workflows, product interfaces, and the operational systems surrounding programmable money.
+| Project | What it covers |
+| --- | --- |
+| [Stablecoin factory](https://github.com/J0UH/stablecoin-factory) | Issuance workflows, contract deployment, metadata, verification, and operator controls. |
+| [Digital cash platform](https://github.com/J0UH/digital-cash-platform) | Programmable digital cash contracts, controls, audit preparation, and operational delivery. |
+| [Vault and liquidity systems](https://github.com/J0UH/vault-liquidity-systems) | Vault workflows, liquidity state, indexed events, and operator-facing calculations. |
+| [Token bridge and SDK](https://github.com/J0UH/token-bridge-sdk) | Cross-network token movement, integration SDKs, deployment support, and verification. |
+| [Asset-backed product interfaces](https://github.com/J0UH/asset-backed-products) | Customer-facing gold and stable-value products built on top of deeper financial infrastructure. |
+| [Stablecoin as a service](https://github.com/J0UH/stablecoin-service-platform) | Multi-tenant issuance, administration, integration, and lifecycle operations. |
+| [Smart contract operations](https://github.com/J0UH/smart-contract-operations) | Contract verification, token metadata, integration lists, testing, and operational release support. |
 
-The underlying systems are company and team work. Upstream open-source components remain attributable to their original authors and licences.
+## How the pieces fit
 
-## Technology areas
+```mermaid
+flowchart LR
+    n0["Product rules"]
+    n1["Authority"]
+    n2["Contracts"]
+    n3["Services and indexing"]
+    n4["Operator tools"]
+    n5["Evidence"]
+    n0 --> n1
+    n1 --> n2
+    n2 --> n3
+    n3 --> n4
+    n4 --> n5
+```
 
-Smart contracts, Solidity, token standards, blockchain indexing, deployment automation, SDK design, TypeScript, backend services, cloud infrastructure, security review, and operator-facing applications.
+## Principles that carry across the work
 
-## Source and confidentiality
+- Make privileged authority explicit and reviewable.
+- Tie deployed artifacts back to a reviewed build.
+- Separate contract state from derived operational state.
+- Treat audit preparation and release evidence as engineering work.
+- Simplify the interface without simplifying away the truth.
 
-This repository is intentionally documentation-only. It contains no private Aryze source code, contract addresses that are not already public, credentials, customer information, internal security controls, or proprietary implementation details. The underlying company work remains private and owned by Aryze.
+<sub>Built under the Aryze umbrella. The underlying source and company IP remain private and owned by Aryze. Delivery involved people across engineering, product, operations, compliance, and design. Open-source foundations retain their original attribution and licences.</sub>
 
+## Talk through a similar problem
+
+[Tell me what you are building](mailto:ju@jomena.group?subject=I%20am%20building%20something%20in%20Stablecoin%20infrastructure) or [book a technical call](mailto:ju@jomena.group?subject=Book%20a%20technical%20call%20about%20Stablecoin%20infrastructure). A fuller portfolio site is in preparation.
